@@ -23,8 +23,12 @@ class Settings:
 
         # Game speed scaling (per level)
         self.speedup_scale = 1.1
+        self.score_scale = 1.5
 
         self.initialize_dynamic_settings()
+
+        #Scoring
+        self.alien_points = 50
 
     def initialize_dynamic_settings(self):
         """Initialize settings that change throughout the game."""
@@ -39,3 +43,5 @@ class Settings:
         self.ship_speed *= self.speedup_scale
         self.bullet_speed *= self.speedup_scale
         self.alien_speed *= self.speedup_scale
+
+        self.alien_points = int(self.alien_points * self.score_scale)
