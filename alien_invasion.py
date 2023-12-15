@@ -81,6 +81,7 @@ class AlienInvasion:
             self.stats.game_active = True
             self.sb.prep_score()
             self.sb.prep_level()
+            self.sb.prep_ships()
 
             # Reset game area
             self.aliens.empty()
@@ -200,6 +201,7 @@ class AlienInvasion:
         """Response to being hit by alien."""
         if self.stats.ships_left > 0:
             self.stats.ships_left -= 1
+            self.sb.prep_ships()
             # Pause for a moment
             sleep(0.5)
         else:
