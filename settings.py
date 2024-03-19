@@ -13,7 +13,7 @@ class Settings:
         self.ship_limit = 3
 
         # Alien settings
-        self.fleet_drop_speed = 10
+        self.fleet_drop_speed = 90
 
         # Bullet settings
         self.bullet_width = 4

@@ -12,6 +12,16 @@ class GameStats:
 
         self.high_score = 0
 
+        # Load high score
+        scorefile = open("highscore.txt", "w")
+        if scorefile.readable():
+            self.high_score = int(scorefile.read())
+        else:
+            print("FAIL")
+            scorefile.write("0")
+
+
+
     def reset_stats(self):
         self.ships_left = self.settings.ship_limit
         self.score = 0

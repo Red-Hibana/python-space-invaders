@@ -32,9 +32,8 @@ class AlienInvasion:
 
         self._create_fleet()
 
-        #Make the play button
+        # Make the play button
         self.play_button = Button(self, "Play")
-
 
     def run_game(self):
         """Start main game loop."""
@@ -208,7 +207,6 @@ class AlienInvasion:
             self.stats.game_active = False
             pygame.mouse.set_visible(True)
 
-
         # Clear bullets and aliens
         self.aliens.empty()
         self.bullets.empty()
@@ -216,7 +214,6 @@ class AlienInvasion:
         # Create new fleet and move ship to center
         self._create_fleet()
         self.ship.center_ship()
-
 
     def _check_aliens_bottom(self):
         """Check if aliens reached the bottom of the screen."""
